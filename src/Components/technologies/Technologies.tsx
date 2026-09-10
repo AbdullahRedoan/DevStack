@@ -15,13 +15,13 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
       <div className="mb-8 text-left">
         <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
           Explore the{" "}
-          <span className="text-purple-500">Technologies</span>
+          <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span>
         </h2>
-        <p className="mt-2 text-base text-slate-500 dark:text-slate-400">
-          Pick one technology per category to build your ideal stack.
+        <p className="mt-2 text-slate-500 text-xl">
+          Pick one technology per category to build your ideal stack. 
         </p>
       </div>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-5">
         <div className=" grid grid-cols-3 col-span-3 gap-5 my-10">
           {technologies.map((technology: ITechnology) => {
             return (
@@ -33,7 +33,7 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
             );
           })}
         </div>
-        <div>
+        <div className="my-10">
           <YourStack
             selectedStack={selectedStack}
             technology={technologies}

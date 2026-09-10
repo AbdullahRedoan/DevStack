@@ -7,7 +7,7 @@ export interface TechnologyCardProps {
 export default function TechnologyCard({ technology }: TechnologyCardProps) {
     
     return (
-    <div className="card bg-base-100 border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
+    <div className="card bg-base-100 border border-gray-200 hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
       {/* Top Row: Icon + Name & Badge */}
       <div>
         <div className="flex items-start justify-between gap-3 mb-3">
@@ -21,7 +21,7 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
           </div>
           
           {/* Badge */}
-          <span className="badge badge-sm badge-secondary bg-pink-100 text-pink-700 dark:bg-pink-950 dark:text-pink-300 border-none font-medium px-2.5 py-1">
+          <span className="badge badge-sm badge-secondary bg-pink-100 text-pink-700 border-none font-medium px-2.5 py-1">
             {technology.badge}
           </span>
         </div>
@@ -37,13 +37,13 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
         {/* Category, Difficulty & Rating */}
         <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-4 pt-3 border-t border-gray-100 dark:border-gray-800">
           {/* Category Chip */}
-          <span className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded-md font-medium">
+          <span className="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-md font-semibold">
             {technology.category}
           </span>
 
           <div className="flex items-center gap-3">
             <span>{technology.difficulty}</span>
-            <span className="flex items-center gap-1 font-semibold text-gray-700 dark:text-gray-300">
+            <span className="flex items-center gap-1 font-semibold text-gray-800">
               <span className="text-yellow-500">★</span> {technology.rating}
             </span>
           </div>
@@ -51,8 +51,8 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
 
         {/* Action Button */}
         <button
-          className={`btn btn-block text-sm font-semibold`}
-        >
+          className={`btn btn-block rounded-lg bg-black text-sm text-white font-light`}
+        > Add to Stack
         </button>
       </div>
     </div>
