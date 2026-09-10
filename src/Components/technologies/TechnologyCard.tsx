@@ -1,10 +1,13 @@
+import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../../types/technologyType";
 
 export interface TechnologyCardProps {
     technology: ITechnology;
+    selectedStack: ITechnology[];
+    handleSetSelectedStack: Dispatch<SetStateAction<ITechnology[]>>
 }
 
-export default function TechnologyCard({ technology }: TechnologyCardProps) {
+export default function TechnologyCard({ technology, selectedStack, handleSetSelectedStack }: TechnologyCardProps) {
     
     return (
     <div className="card bg-base-100 border border-gray-200 hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
@@ -50,7 +53,7 @@ export default function TechnologyCard({ technology }: TechnologyCardProps) {
         </div>
 
         {/* Action Button */}
-        <button
+        <button onClick={handleSetSelectedStack(technology)}
           className={`btn btn-block rounded-lg bg-black text-sm text-white font-light`}
         > Add to Stack
         </button>

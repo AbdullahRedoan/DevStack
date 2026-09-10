@@ -7,7 +7,7 @@ export interface YourStackProps {
     setSelectedStack: Dispatch<SetStateAction<ITechnology[]>>
 }
 export default function YourStack({ technology, selectedStack }: YourStackProps) {
-    const isEmpty:ITechnology[] = []
+    const isEmpty:ITechnology[] | [] = []
     console.log(technology);
     return(
         <div className="bg-white border border-gray-200 rounded-2xl p-6">

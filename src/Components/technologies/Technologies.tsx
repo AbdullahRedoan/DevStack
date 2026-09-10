@@ -9,7 +9,14 @@ interface technologiesProps {
 
 const Technologies = ({ technologiesPromise }: technologiesProps) => {
   const technologies = use(technologiesPromise);
-  const [selectedStack, setSelectedStack] = useState();
+  const [selectedStack, setSelectedStack] = useState([]);
+  console.log(selectedStack);
+
+    const handleSetSelectedStack = (technology:ITechnology):void =>{
+        const newSelectedStack = [...selectedStack, technology];
+        setSelectedStack(newSelectedStack)
+    }
+
   return (
     <div className=" w-9/10 mx-auto">
       <div className="mb-8 text-left">
@@ -27,7 +34,7 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
             return (
               <TechnologyCard
                 selectedStack={selectedStack}
-                setSelectedStack={setSelectedStack}
+                handleSetSelectedStack={()=> handleSetSelectedStack}
                 technology={technology}
               ></TechnologyCard>
             );
