@@ -1,27 +1,13 @@
+import { RxHamburgerMenu } from "react-icons/rx";
 import Logo from "../assets/logo-text.png";
 const Nav = () => {
   return (
-    <div className="bg-base-100 shadow-sm sticky">
+    <div className="bg-base-100 shadow-sm sticky top-0 z-50">
       <div className="navbar lg:max-w-9/10 mx-auto">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                aria-label="Menu"
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
-              </svg>
+              <RxHamburgerMenu />
             </div>
             <ul
               tabIndex={-1}
@@ -45,7 +31,7 @@ const Nav = () => {
             </ul>
           </div>
           <a className="btn btn-ghost">
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Logo" className="h-6 sm:h-11 md:h-13 w-auto object-contain shrink-0 max-w-45 sm:max-w-60 md:max-w-none" />
           </a>
         </div>
         <div className="navbar-center text-gray-500 hidden lg:flex">
@@ -68,8 +54,8 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <a className="btn-ghost">Sign In</a>
-          <a className="btn bg-[#D91B7E] text-white rounded-4xl">Sign Up</a>
+          <a className="btn-ghost btn-xs lg:btn-md text-sm lg:text-md font-semibold text-gray-700">Sign In</a>
+          <a className="btn bg-[#D91B7E] text-white rounded-4xl btn-xs lg:btn-md">Sign Up</a>
         </div>
       </div>
     </div>
