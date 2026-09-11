@@ -4,11 +4,11 @@ import type { ITechnology } from "../../types/technologyType";
 export interface TechnologyCardProps {
     technology: ITechnology;
     selectedStack: ITechnology[];
-    handleSetSelectedStack: Dispatch<SetStateAction<ITechnology[]>>
+    handleSetSelectedStack: Dispatch<SetStateAction<ITechnology>>
 }
 
 export default function TechnologyCard({ technology, selectedStack, handleSetSelectedStack }: TechnologyCardProps) {
-    
+    console.log(selectedStack );
     return (
     <div className="card bg-base-100 border border-gray-200 hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
       {/* Top Row: Icon + Name & Badge */}
@@ -30,7 +30,7 @@ export default function TechnologyCard({ technology, selectedStack, handleSetSel
         </div>
 
         {/* Description */}
-        <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-2 mb-4">
+        <p className="text-gray-600 text-sm line-clamp-2 mb-4">
           {technology.description}
         </p>
       </div>
@@ -38,7 +38,7 @@ export default function TechnologyCard({ technology, selectedStack, handleSetSel
       {/* Card Details & Footer */}
       <div>
         {/* Category, Difficulty & Rating */}
-        <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-4 pt-3 border-t border-gray-100 dark:border-gray-800">
+        <div className="flex items-center justify-between text-xs text-gray-500 mb-4 pt-3 border-t border-gray-100">
           {/* Category Chip */}
           <span className="bg-gray-100 text-gray-500 px-2 py-0.5 rounded-md font-semibold">
             {technology.category}
@@ -53,7 +53,7 @@ export default function TechnologyCard({ technology, selectedStack, handleSetSel
         </div>
 
         {/* Action Button */}
-        <button onClick={handleSetSelectedStack(technology)}
+        <button onClick={()=> handleSetSelectedStack(technology)}
           className={`btn btn-block rounded-lg bg-black text-sm text-white font-light`}
         > Add to Stack
         </button>
