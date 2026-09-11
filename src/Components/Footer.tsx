@@ -64,7 +64,7 @@ export const Footer = () => {
         {/* Divider Line */}
         <div className="border-t border-slate-100 pt-6">
           {/* Bottom Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+          <div className="flex sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
             <p>© 2026 Dev Stack. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <a href="#privacy" className="hover:text-slate-600 transition-colors">
