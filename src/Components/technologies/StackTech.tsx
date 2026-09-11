@@ -3,7 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 
 export interface StackTechProps {
   technology: ITechnology;
-  handleRemoveFromStack: (id:string)=>void
+  handleRemoveFromStack: (name:string ,id:string)=>void
 }
 
 export default function StackTech({ technology, handleRemoveFromStack }: StackTechProps) {
@@ -29,7 +29,7 @@ export default function StackTech({ technology, handleRemoveFromStack }: StackTe
 
       {/* Right: Close / Remove Button */}
       <button
-        onClick={() => handleRemoveFromStack?.(technology.id)}
+        onClick={() => handleRemoveFromStack(technology.name, technology.id)}
         className="text-slate-400 hover:text-slate-600 transition-colors p-1"
         aria-label="Remove item"
       >

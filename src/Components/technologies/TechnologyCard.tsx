@@ -50,8 +50,6 @@ export default function TechnologyCard({
             </span>
           </div>
         </div>
-
-        {/* Action Button */}
         <button
           onClick={() => handleSetSelectedStack(technology)}
           className={`btn btn-block rounded-lg ${isAdded ? "bg-gray-300" : "bg-black"} text-sm text-white font-light`} disabled={isAdded}

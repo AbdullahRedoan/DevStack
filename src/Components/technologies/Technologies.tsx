@@ -2,6 +2,7 @@ import { use, useState } from "react";
 import type { ITechnology } from "../../types/technologyType";
 import TechnologyCard from "./TechnologyCard";
 import YourStack from "./YourStack";
+import { Bounce, toast } from "react-toastify";
 
 interface technologiesProps {
   technologiesPromise: Promise<ITechnology[]>;
@@ -12,6 +13,17 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
   const [selectedStack, setSelectedStack] = useState<ITechnology[]>([]);
 
     const handleSetSelectedStack = (technology:ITechnology):void =>{
+      toast.success(`Successfully Added ${technology.name} to Your Stack`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
         const newSelectedStack = [...selectedStack, technology];
         setSelectedStack(newSelectedStack)
     }
