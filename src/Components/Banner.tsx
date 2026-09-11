@@ -2,17 +2,17 @@ import bannerImg from "../assets/banner-stack.png";
 const Banner = () => {
   return (
     <div className="bg-base-100">
-      <div className="hero py-0 lg:py-0 max-w-9/10 mx-auto">
-        <div className="hero-content flex-col-reverse lg:flex-row-reverse justify-between gap-10 max-w-full mx-auto px-4">
-          <div className="flex-1 flex justify-center">
+      <div className="hero block place-items-stretch py-0 lg:py-30 max-w-10/12 mx-auto">
+        <div className="hero-content flex-col-reverse lg:flex-row-reverse justify-between gap-10 max-w-full mx-auto px-2">
+          <div className="flex-1 flex justify-end">
             <img
               src={bannerImg}
               alt="Dev Stack Illustration"
-              className="max-w-xs sm:max-w-sm lg:max-w-full w-full object-contain"
+              className="max-w-xs sm:max-w-sm lg:max-w-11/12 w-full object-contain"
             />
           </div>
 
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-left grow-2">
             <h1 className="text-2xl text-center md:text-left lg:text-left sm:text-5xl lg:text-6xl font-extrabold">
               Build Your Ideal <br />
               <span className="bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
