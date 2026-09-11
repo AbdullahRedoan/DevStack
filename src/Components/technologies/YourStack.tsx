@@ -7,8 +7,15 @@ export interface YourStackProps {
     selectedStack: ITechnology[];
     setSelectedStack: Dispatch<SetStateAction<ITechnology[]>>
 }
-export default function YourStack({ selectedStack }: YourStackProps) {
+export default function YourStack({ selectedStack, setSelectedStack }: YourStackProps) {
     const isEmpty = selectedStack.length === 0;
+    const handleRemoveFromStack = (id:string):void =>{
+      const newStack = selectedStack.filter(tech => tech.id !== id);
+      setSelectedStack(newStack);
+    }
+    const handleRemoveAll = () => {
+      setSelectedStack([]);
+    }
     return(
         <div className="bg-white border border-gray-200 rounded-2xl p-6">
       <h2 className="text-xl font-bold m-0">Your Stack</h2>
@@ -24,10 +31,11 @@ export default function YourStack({ selectedStack }: YourStackProps) {
           {
             selectedStack.map((tech):React.ReactNode => {
               return(
-                <StackTech technology={tech}></StackTech>
+                <StackTech handleRemoveFromStack={handleRemoveFromStack} technology={tech}></StackTech>
               )
             })
           }
+          <button onClick={handleRemoveAll} className="btn btn-error btn-outline w-full my-4 rounded-xl">Remove All</button>
         </div>
       )}
     </div>

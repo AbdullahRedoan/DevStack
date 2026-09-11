@@ -1,10 +1,12 @@
 import type { ITechnology } from "../../types/technologyType";
+import { RxCross2 } from "react-icons/rx";
 
 export interface StackTechProps {
   technology: ITechnology;
+  handleRemoveFromStack: (id:string)=>void
 }
 
-export default function StackTech({ technology }: StackTechProps) {
+export default function StackTech({ technology, handleRemoveFromStack }: StackTechProps) {
   
   return (
     <div className="flex items-center justify-between my-2 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm">
@@ -27,23 +29,11 @@ export default function StackTech({ technology }: StackTechProps) {
 
       {/* Right: Close / Remove Button */}
       <button
-        // onClick={() => onRemove?.(item.id)}
+        onClick={() => handleRemoveFromStack?.(technology.id)}
         className="text-slate-400 hover:text-slate-600 transition-colors p-1"
         aria-label="Remove item"
       >
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
+        <RxCross2/>
       </button>
     </div>
   );
