@@ -12,8 +12,8 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
   const technologies = use(technologiesPromise);
   const [selectedStack, setSelectedStack] = useState<ITechnology[]>([]);
 
-    const handleSetSelectedStack = (technology:ITechnology):void =>{
-      toast.success(`Successfully Added ${technology.name} to Your Stack`, {
+  const handleSetSelectedStack = (technology: ITechnology): void => {
+    toast.success(`Successfully Added ${technology.name} to Your Stack`, {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -24,19 +24,18 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
       theme: "dark",
       transition: Bounce,
     });
-        const newSelectedStack = [...selectedStack, technology];
-        setSelectedStack(newSelectedStack)
-    }
+    const newSelectedStack = [...selectedStack, technology];
+    setSelectedStack(newSelectedStack);
+  };
 
   return (
     <div className=" w-9/10 mx-auto">
       <div className="mb-8 text-center md:text-left lg:text-left">
         <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-          Explore the{" "}
-          <span className="text-theme-gradient">Technologies</span>
+          Explore the <span className="text-theme-gradient">Technologies</span>
         </h2>
         <p className="mt-2 text-slate-500 text-xs">
-          Pick one technology per category to build your ideal stack. 
+          Pick one technology per category to build your ideal stack.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
@@ -45,7 +44,9 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
             return (
               <TechnologyCard
                 selectedStack={selectedStack}
-                handleSetSelectedStack={()=> handleSetSelectedStack(technology)}
+                handleSetSelectedStack={() =>
+                  handleSetSelectedStack(technology)
+                }
                 technology={technology}
               ></TechnologyCard>
             );

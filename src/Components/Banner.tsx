@@ -15,9 +15,7 @@ const Banner = () => {
           <div className="flex-1 text-left grow-2">
             <h1 className="text-4xl text-center pt-10 lg:text-left sm:text-5xl lg:text-6xl font-extrabold">
               Build Your Ideal <br />
-              <span className="text-theme-gradient">
-                Development Stack
-              </span>
+              <span className="text-theme-gradient">Development Stack</span>
             </h1>
 
             <p className="py-6 text-gray-500 text-base lg:text-2xl sm:text-lg text-center md:text-left lg:text-left max-w-3xl">

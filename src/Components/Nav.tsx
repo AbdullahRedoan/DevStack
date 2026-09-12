@@ -31,31 +31,49 @@ const Nav = () => {
             </ul>
           </div>
           <a className="btn btn-ghost">
-            <img src={Logo} alt="Logo" className="h-6 sm:h-11 md:h-11 w-auto object-contain shrink-0 max-w-45 sm:max-w-60 md:max-w-none" />
+            <img
+              src={Logo}
+              alt="Logo"
+              className="h-6 sm:h-11 md:h-11 w-auto object-contain shrink-0 max-w-45 sm:max-w-60 md:max-w-none"
+            />
           </a>
         </div>
         <div className="navbar-center text-gray-500 hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="hover:text-pink-600 transition-colors bg-white">Home</a>
+              <a className="hover:text-pink-600 transition-colors bg-white">
+                Home
+              </a>
             </li>
             <li>
-              <a className="hover:text-pink-600 transition-colors bg-white">Technologies</a>
+              <a className="hover:text-pink-600 transition-colors bg-white">
+                Technologies
+              </a>
             </li>
             <li>
-              <a className="hover:text-pink-600 transition-colors bg-white">Projects</a>
+              <a className="hover:text-pink-600 transition-colors bg-white">
+                Projects
+              </a>
             </li>
             <li>
-              <a className="hover:text-pink-600 transition-colors bg-white">About</a>
+              <a className="hover:text-pink-600 transition-colors bg-white">
+                About
+              </a>
             </li>
             <li>
-              <a className="hover:text-pink-600 transition-colors bg-white">Contact</a>
+              <a className="hover:text-pink-600 transition-colors bg-white">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <a className="btn-ghost btn-xs lg:btn-md text-sm lg:text-md font-semibold text-gray-700">Sign In</a>
-          <a className="btn bg-theme-gradient text-white rounded-4xl btn-xs lg:btn-md">Sign Up</a>
+          <a className="btn-ghost btn-xs lg:btn-md text-sm lg:text-md font-semibold text-gray-700">
+            Sign In
+          </a>
+          <a className="btn bg-theme-gradient text-white rounded-4xl btn-xs lg:btn-md">
+            Sign Up
+          </a>
         </div>
       </div>
     </div>

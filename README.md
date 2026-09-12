@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 DevStack
 
-Currently, two official plugins are available:
+**A curated collection of tools, technologies, and resources for modern software developers.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 About The Project
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**DevStack** is a responsive web application designed to help developers discover, organize, and manage their modern tech stacks. Built with a focus on performance, accessibility, and sleek visual components, DevStack makes exploring developer tools effortless.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Built With
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Build Tool:** Vite
+- **Frontend:** React 19, TypeScript
+- **Styling:** Tailwind CSS v4, DaisyUI
+- **Icons:** React Icons (`react-icons`)
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## ✨ Key Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **⚡ Responsive Dynamic Components**  
+  Fully optimized layout featuring a sticky navigation header, custom responsive logo handling, and adaptive desktop/mobile footers.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **🎨 Centralized Theme Gradients**  
+  Unified global styling powered by custom CSS utilities (`bg-theme-gradient`, `text-theme-gradient`) with seamless Orange-Pink-Violet themes.
 
-```
+- **🔄 Interactive Tech Stack Management**  
+  Add, view, and remove technologies dynamically from your personal stack with smooth UI feedback and event propagation handling.
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/your-username/devstack.git](https://github.com/your-username/devstack.git)
+   cd devstack
+   ```
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   Run the development server
+
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```

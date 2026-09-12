@@ -3,14 +3,15 @@ import { RxCross2 } from "react-icons/rx";
 
 export interface StackTechProps {
   technology: ITechnology;
-  handleRemoveFromStack: (name:string ,id:string)=>void
+  handleRemoveFromStack: (name: string, id: string) => void;
 }
 
-export default function StackTech({ technology, handleRemoveFromStack }: StackTechProps) {
-  
+export default function StackTech({
+  technology,
+  handleRemoveFromStack,
+}: StackTechProps) {
   return (
     <div className="flex items-center justify-between my-2 p-4 bg-white border border-slate-100 rounded-2xl shadow-sm">
-      {/* Left: Icon, Name & Category */}
       <div className="flex items-center gap-3">
         <img
           src={technology.icon}
@@ -27,13 +28,12 @@ export default function StackTech({ technology, handleRemoveFromStack }: StackTe
         </div>
       </div>
 
-      {/* Right: Close / Remove Button */}
       <button
         onClick={() => handleRemoveFromStack(technology.name, technology.id)}
         className="text-slate-400 hover:text-slate-600 transition-colors p-1"
         aria-label="Remove item"
       >
-        <RxCross2/>
+        <RxCross2 />
       </button>
     </div>
   );

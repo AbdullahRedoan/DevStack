@@ -13,23 +13,22 @@ export default function TechnologyCard({
   selectedStack,
   handleSetSelectedStack,
 }: TechnologyCardProps) {
-
   const isAdded = selectedStack.includes(technology);
-  const handleDoubleClick = (name:string) =>{
-    if(isAdded){
-       toast.error(`${name} is already in Your Stack`, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-      transition: Bounce,
-    });
+  const handleDoubleClick = (name: string) => {
+    if (isAdded) {
+      toast.error(`${name} is already in Your Stack`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
     }
-  }
+  };
   return (
     <div className="card bg-base-100 border border-gray-200 hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
       <div>
@@ -66,15 +65,14 @@ export default function TechnologyCard({
             </span>
           </div>
         </div>
-        <div onClick={()=>handleDoubleClick(technology.name)}>
+        <div onClick={() => handleDoubleClick(technology.name)}>
           <button
-          onClick={() => handleSetSelectedStack(technology)}
-          className={`btn btn-block rounded-lg ${isAdded ? "bg-gray-300" : "bg-black"} text-sm text-white font-light`} disabled={isAdded} 
-        >
-          {
-            isAdded ? "✔Added to Stack" : "Add to Stack"
-          }
-        </button>
+            onClick={() => handleSetSelectedStack(technology)}
+            className={`btn btn-block rounded-lg ${isAdded ? "bg-gray-300" : "bg-black"} text-sm text-white font-light`}
+            disabled={isAdded}
+          >
+            {isAdded ? "✔Added to Stack" : "Add to Stack"}
+          </button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function YourStack({
   setSelectedStack,
 }: YourStackProps) {
   const isEmpty = selectedStack.length === 0;
-  const handleRemoveFromStack = (name:string, id:string): void => {
+  const handleRemoveFromStack = (name: string, id: string): void => {
     const newStack = selectedStack.filter((tech) => tech.id !== id);
     setSelectedStack(newStack);
     toast.success(`Removed ${name} from Your Stack`, {
@@ -29,8 +29,8 @@ export default function YourStack({
     });
   };
   const handleRemoveAll = () => {
-     setSelectedStack([]);
-     toast.success("Removed All Skills from Your Stack", {
+    setSelectedStack([]);
+    toast.success("Removed All Skills from Your Stack", {
       position: "bottom-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -56,7 +56,6 @@ export default function YourStack({
           <small> Your stack is empty.</small>
         </div>
       ) : (
-        /* Render Stack Items List & Remove All Button */
         <div>
           {selectedStack.map((tech): React.ReactNode => {
             return (
