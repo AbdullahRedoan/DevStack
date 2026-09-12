@@ -3,7 +3,7 @@ import Logo from "../assets/logo-text.png";
 const Nav = () => {
   return (
     <div className="bg-base-100 shadow-sm sticky top-0 z-50">
-      <div className="navbar lg:max-w-9/10 mx-auto">
+      <div className="navbar lg:max-w-9/10 mx-auto flex justify-between">
         <div className="navbar-start ">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,13 +30,15 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost">
+          <div className="">
+            <a className="btn btn-ghost">
             <img
               src={Logo}
               alt="Logo"
-              className="h-6 sm:h-11 md:h-11 w-auto object-contain shrink-0 max-w-45 sm:max-w-60 md:max-w-none"
+              className="h-6 pl-11 md:pl-0 sm:h-11 md:h-11 w-auto object-contain shrink-0 max-w-45 sm:max-w-60 md:max-w-none"
             />
           </a>
+          </div>
         </div>
         <div className="navbar-center text-gray-500 hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

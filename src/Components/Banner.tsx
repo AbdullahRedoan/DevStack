@@ -25,10 +25,10 @@ const Banner = () => {
             </p>
 
             <div className="flex justify-center lg:justify-start lg:flex-wrap gap-5 my-12">
-              <button className="btn border-none text-white bg-theme-gradient hover:opacity-90 rounded-lg font-normal lg:font-bold">
+              <button className="btn btn-sm md:btn-md lg:btn-md border-none text-white bg-theme-gradient hover:opacity-90 rounded-lg font-normal lg:font-bold">
                 Explore Technologies
               </button>
-              <button className="btn lg:w-50 w-48 btn-outline rounded-lg border-gray-200 hover:bg-gray-100 ">
+              <button className="btn btn-sm md:btn-md lg:btn-md lg:w-50 btn-outline rounded-lg border-gray-200 hover:bg-gray-100 ">
                 Learn More
               </button>
             </div>
