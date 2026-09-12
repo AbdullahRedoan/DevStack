@@ -3,3 +3,31 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
 }
+@theme {
+  --color-theme-from: #f97316; /* Orange */
+  --color-theme-via: #ec4899;  /* Pink */
+  --color-theme-to: #8b5cf6;   /* Violet */
+}
+
+/* Background gradient utility */
+@utility bg-theme-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-theme-from),
+    var(--color-theme-via),
+    var(--color-theme-to)
+  );
+}
+
+/* Text gradient utility */
+@utility text-theme-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-theme-from),
+    var(--color-theme-via),
+    var(--color-theme-to)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

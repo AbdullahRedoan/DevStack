@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../../types/technologyType";
+import { Bounce, toast } from "react-toastify";
 
 export interface TechnologyCardProps {
   technology: ITechnology;
@@ -14,6 +15,21 @@ export default function TechnologyCard({
 }: TechnologyCardProps) {
 
   const isAdded = selectedStack.includes(technology);
+  const handleDoubleClick = (name) =>{
+    if(isAdded){
+       toast.error(`${name} is already in Your Stack`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
+    }
+  }
   return (
     <div className="card bg-base-100 border border-gray-200 hover:shadow-md transition-shadow p-5 flex flex-col justify-between rounded-xl">
       <div>
@@ -50,14 +66,16 @@ export default function TechnologyCard({
             </span>
           </div>
         </div>
-        <button
+        <div onClick={()=>handleDoubleClick(technology.name)}>
+          <button
           onClick={() => handleSetSelectedStack(technology)}
-          className={`btn btn-block rounded-lg ${isAdded ? "bg-gray-300" : "bg-black"} text-sm text-white font-light`} disabled={isAdded}
+          className={`btn btn-block rounded-lg ${isAdded ? "bg-gray-300" : "bg-black"} text-sm text-white font-light`} disabled={isAdded} 
         >
           {
-            isAdded ? "Added to Stack" : "Add to Stack"
+            isAdded ? "✔Added to Stack" : "Add to Stack"
           }
         </button>
+        </div>
       </div>
     </div>
   );

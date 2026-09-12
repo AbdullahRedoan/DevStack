@@ -15,7 +15,7 @@ const Banner = () => {
           <div className="flex-1 text-left grow-2">
             <h1 className="text-2xl text-center md:text-left lg:text-left sm:text-5xl lg:text-6xl font-extrabold">
               Build Your Ideal <br />
-              <span className="bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-theme-gradient">
                 Development Stack
               </span>
             </h1>
@@ -27,7 +27,7 @@ const Banner = () => {
             </p>
 
             <div className="flex lg:flex-wrap gap-4 my-12">
-              <button className="btn border-none text-white bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 hover:opacity-90 rounded-lg font-normal lg:font-bold">
+              <button className="btn border-none text-white bg-theme-gradient hover:opacity-90 rounded-lg font-normal lg:font-bold">
                 Explore Technologies
               </button>
               <button className="btn lg:w-50 btn-outline rounded-lg border-gray-200 hover:bg-gray-100 ">
