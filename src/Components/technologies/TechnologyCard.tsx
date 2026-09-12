@@ -15,7 +15,7 @@ export default function TechnologyCard({
 }: TechnologyCardProps) {
 
   const isAdded = selectedStack.includes(technology);
-  const handleDoubleClick = (name) =>{
+  const handleDoubleClick = (name:string) =>{
     if(isAdded){
        toast.error(`${name} is already in Your Stack`, {
       position: "bottom-right",

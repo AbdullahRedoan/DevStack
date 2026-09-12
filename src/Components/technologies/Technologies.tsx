@@ -30,8 +30,8 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
 
   return (
     <div className=" w-9/10 mx-auto">
-      <div className="mb-8 text-left">
-        <h2 className="text-2xl text-center md:text-left lg:text-left sm:text-4xl font-extrabold tracking-tight text-slate-900">
+      <div className="mb-8 text-center md:text-left lg:text-left">
+        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
           Explore the{" "}
           <span className="text-theme-gradient">Technologies</span>
         </h2>

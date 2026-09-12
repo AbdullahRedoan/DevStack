@@ -5,9 +5,9 @@ export const Footer = () => {
     <footer className="w-full bg-white border-t border-slate-100 text-slate-500 text-sm">
       <div className="max-w-7xl mx-auto px-4 pt-12 pb-8">
         
-        <div className="grid grid-cols-5 gap-8 mb-12 text-center md:text-left">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3  gap-8 mb-12 text-center md:text-left">
           
-          <div className="max-w-sm col-span-2 flex flex-col items-center md:items-start">
+          <div className="max-w-full justify-center lg:col-span-2 md:col-span-1 flex flex-col items-center md:items-start">
             <img
               src={Logo} // Replace with your combined image logo path
               alt="DevStack"
@@ -28,7 +28,7 @@ export const Footer = () => {
           </div>
 
           {/* Desktop Navigation Links (Hidden on Mobile) */}
-          <div className="hidden md:grid grid-cols-3 col-span-3 gap-12 lg:gap-16 text-left">
+          <div className="hidden md:grid grid-cols-3 lg:col-span-3 md:col-span-2 gap-12 lg:gap-16 text-left">
             {/* Product */}
             <div className="flex flex-col gap-3">
               <h4 className="font-bold text-xs uppercase tracking-wider text-slate-900">
