@@ -18,7 +18,7 @@ export default function YourStack({
     setSelectedStack(newStack);
     toast.success(`Removed ${name} from Your Stack`, {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: true,
@@ -59,7 +59,7 @@ export default function YourStack({
         <div>
           {selectedStack.map((tech): React.ReactNode => {
             return (
-              <StackTech
+              <StackTech key={tech.id}
                 handleRemoveFromStack={handleRemoveFromStack}
                 technology={tech}
               ></StackTech>

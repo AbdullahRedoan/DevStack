@@ -18,7 +18,7 @@ export default function TechnologyCard({
     if (isAdded) {
       toast.error(`${name} is already in Your Stack`, {
         position: "bottom-right",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,

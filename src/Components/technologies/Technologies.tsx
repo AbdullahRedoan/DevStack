@@ -15,7 +15,7 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
   const handleSetSelectedStack = (technology: ITechnology): void => {
     toast.success(`Successfully Added ${technology.name} to Your Stack`, {
       position: "bottom-right",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: false,
       pauseOnHover: true,
@@ -42,7 +42,7 @@ const Technologies = ({ technologiesPromise }: technologiesProps) => {
         <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:col-span-3 gap-5 my-10">
           {technologies.map((technology: ITechnology) => {
             return (
-              <TechnologyCard
+              <TechnologyCard key={technology.id}
                 selectedStack={selectedStack}
                 handleSetSelectedStack={() =>
                   handleSetSelectedStack(technology)
