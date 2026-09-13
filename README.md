@@ -63,29 +63,30 @@
 
 
 **FAQs**
+
 What is JSX and why is it used in React.js?
 
-JSX is simply a combination of HTML and JS file. We can write HTML elements and JavaScript logic in the same file. React.JS uses JSX file because it simplifies the process of creating implementing and managing components.
+JSX is simply a combination of HTML and JS files. We can write HTML elements and JavaScript logic in the same file. React.JS uses JSX files because it simplifies the process of creating, implementing, and managing components.
 
 
 Props vs State:
-Props are passed into a child component from its parent component to deliver certain data while State is a variable which is created and used in a component to store local dynamic data. A prop cannot be modified from a child component but a state can be updated.
+Props are passed into a child component from its parent component to deliver certain data, while State is a variable that is created and used in a component to store local dynamic data. A prop cannot be modified from a child component, but state can be updated.
 
 useState:
-useState is a React hook, used for storing site's local data so that it can be used for developing different logic in the site. useState hook comes with a state variable and a setter function that sets and changes the value of the variable.
-For example, I've used it to show the skill cards added in  the 'Your Stack' section in DevStack website.
+useState is a React hook used for storing the site's local data so that it can be used for developing different logic in the site. useState hook comes with a state variable and a setter function that sets and changes the value of the variable.
+For example, I've used it to show the skill cards added in  the 'Your Stack' section on the DevStack website.
 
 useEffect:
-useEffect is another hook in React which is used to perform a certain work which's result or effect has to be used in other functionalities in a website. Such as loading data from api with useEffect and let the whole site use the data.
-I had to load the JSON data because it let the website to be dynamic and gives a chance to use components dynamically.  .json is the standard language for api and data communication, that's why the data is in JSON format.
+useEffect is another hook in React that is used to perform a certain work whose result or effect has to be used in other functionalities in a website. Such as loading data from api with useEffect and letting the whole site use the data.
+I had to load the JSON data because it lets the website be dynamic and gives a chance to use components dynamically.  JSON is the standard format for api and data communication across modern applications and services; that's why the data is in JSON format.
 
 
 Key in .map() method:
-.map() iterates through an array and assigning an unique value to each item through key prop let the method recognise,  compare and manage each item more accurately.
+.map() iterates through an array and assigns a unique value to each item through the key prop, letting the method recognise,  compare, and manage each item more accurately.
 
 Conditional Rendering:
-This is a way of showing elements dynamically depending on certain conditions in a website. It renders specific UI elements in the website through conditional evaluation, declared with ternary operator.
+This is a way of showing elements dynamically depending on certain conditions in a website. It renders specific UI elements in the website through conditional evaluation, declared with a ternary operator.
 
 
-Data sharing between parent and child component:
-In a React application, data is sent through props from a parent to a child component. And a child component can send data through a callback function passed down from its parent as arguments.
+Data sharing between parent and child components:
+In a React application, data is sent through props from a parent to a child component. A child component can send data through a callback function passed down from its parent as an argument.
